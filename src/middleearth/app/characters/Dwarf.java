@@ -13,7 +13,7 @@ public class Dwarf extends MiddleEarthCharacter{
 	 * 		The argument is the character to be attacked.
 	 * */
 	@Override
-	boolean attack(MiddleEarthCharacter target) {
+	public boolean attack(MiddleEarthCharacter target) {
 		
 		// Dwarfs attack Elf w/ x1.5 power
 		if(target.getClass().getSimpleName().equals("Elf"))

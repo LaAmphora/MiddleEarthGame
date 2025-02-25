@@ -24,9 +24,9 @@ public abstract class MiddleEarthCharacter {
 	}
 	
 	
-	abstract boolean attack(MiddleEarthCharacter target);
+	public abstract boolean attack(MiddleEarthCharacter target);
 	
-	abstract String getRace();
+	public abstract String getRace();
 	
 	/**
 	 * Displays information about a Middle Earth Character.

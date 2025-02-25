@@ -7,7 +7,7 @@ public class Orc extends MiddleEarthCharacter{
 	}
 
 	@Override
-	boolean attack(MiddleEarthCharacter target) {
+	public boolean attack(MiddleEarthCharacter target) {
 		// TODO Auto-generated method stub
 		return false;
 	}
