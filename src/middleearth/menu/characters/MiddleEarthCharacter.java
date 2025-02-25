@@ -6,6 +6,7 @@ public abstract class MiddleEarthCharacter {
 	Double health;
 	Double power;
 
+	
 	/**
 	 * This is a parameterized constructor that allows the user to create
 	 * a Middle Earth Character with a name, health, and power.
@@ -23,5 +24,13 @@ public abstract class MiddleEarthCharacter {
 	}
 	
 	
+	abstract boolean attack(MiddleEarthCharacter target);
+	
+	abstract String getRace();
+	
+	
+	void displayInfo() {
+		System.out.println(name + " Information: Health=" + health + " Power=" + power);
+	}
 	
 }
