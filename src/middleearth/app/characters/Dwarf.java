@@ -6,9 +6,38 @@ public class Dwarf extends MiddleEarthCharacter{
 		super(name, health, power);
 	}
 
+	/**
+	 * Performs an attack on a target based on the rules of a dwarf
+	 * attack on the target's race.
+	 * @param target (MiddleEarthCharacter)
+	 * 		The argument is the character to be attacked.
+	 * */
 	@Override
 	boolean attack(MiddleEarthCharacter target) {
-		// TODO Auto-generated method stub
+		
+		// Elves attack Orcs w/ x1.5 power
+		if(target.getClass().getSimpleName().equals("Orc"))
+		{
+			target.health -= 1.5 * power;
+			return true;
+		}
+		
+		// Elves attack Dwarfs and fellow elves w/ no power
+		if(target.getClass().getSimpleName().equals("Dwarf") ||
+				target.getClass().getSimpleName().equals("Elf"))
+		{
+			target.health -= 0;
+			return true;
+		}
+		
+		// Elves attack Wizards and Humans w/ normal power
+		if(target.getClass().getSimpleName().equals("Wizard") ||
+				target.getClass().getSimpleName().equals("Human"))
+		{
+			target.health -= power;
+			return true;
+		}
+			
 		return false;
 	}
 
