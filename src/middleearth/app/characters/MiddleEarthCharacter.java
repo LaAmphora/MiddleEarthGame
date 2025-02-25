@@ -1,4 +1,4 @@
-package middleearth.menu.characters;
+package middleearth.app.characters;
 
 public abstract class MiddleEarthCharacter {
 	
@@ -31,7 +31,7 @@ public abstract class MiddleEarthCharacter {
 	/**
 	 * Displays information about a Middle Earth Character.
 	 * */
-	void displayInfo() {
+	public void displayInfo() {
 		System.out.println(name + " Information: Health=" + health + " Power=" + power);
 	}
 	
