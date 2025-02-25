@@ -15,24 +15,24 @@ public class Dwarf extends MiddleEarthCharacter{
 	@Override
 	boolean attack(MiddleEarthCharacter target) {
 		
-		// Elves attack Orcs w/ x1.5 power
-		if(target.getClass().getSimpleName().equals("Orc"))
+		// Dwarfs attack Elf w/ x1.5 power
+		if(target.getClass().getSimpleName().equals("Elf"))
 		{
 			target.health -= 1.5 * power;
 			return true;
 		}
 		
-		// Elves attack Dwarfs and fellow elves w/ no power
+		// Dwarfs attack Wizards and fellow Dwarfs
 		if(target.getClass().getSimpleName().equals("Dwarf") ||
-				target.getClass().getSimpleName().equals("Elf"))
+				target.getClass().getSimpleName().equals("Wizard"))
 		{
 			target.health -= 0;
 			return true;
 		}
 		
-		// Elves attack Wizards and Humans w/ normal power
-		if(target.getClass().getSimpleName().equals("Wizard") ||
-				target.getClass().getSimpleName().equals("Human"))
+		// Dwarfs attack Orcs and Humans w/ normal power
+		if(target.getClass().getSimpleName().equals("Human") ||
+				target.getClass().getSimpleName().equals("Orc"))
 		{
 			target.health -= power;
 			return true;

@@ -8,7 +8,7 @@ public class Elf extends MiddleEarthCharacter {
 
 	/**
 	 * Performs an attack on a target based on the rules of an elf
-	 * attack on the targets race.
+	 * attack on the target's race.
 	 * @param target (MiddleEarthCharacter)
 	 * 		The argument is the character to be attacked.
 	 * */
