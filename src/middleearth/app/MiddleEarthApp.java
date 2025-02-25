@@ -1,7 +1,6 @@
 package middleearth.app;
 
 import middleearth.app.characters.Elf;
-import middleearth.app.characters.MiddleEarthCharacter;
 
 public class MiddleEarthApp {
 
