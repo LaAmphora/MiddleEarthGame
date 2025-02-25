@@ -28,7 +28,9 @@ public abstract class MiddleEarthCharacter {
 	
 	abstract String getRace();
 	
-	
+	/**
+	 * Displays information about a Middle Earth Character.
+	 * */
 	void displayInfo() {
 		System.out.println(name + " Information: Health=" + health + " Power=" + power);
 	}
