@@ -1,6 +1,7 @@
 package middleearth.app;
 
 import middleearth.app.characters.Elf;
+import middleearth.app.characters.Wizard;
 import middleearth.app.characters.Human;
 
 public class MiddleEarthApp {
@@ -16,6 +17,12 @@ public class MiddleEarthApp {
 		human.attack(elf);
 		
 		elf.displayInfo();
+		
+		Wizard wizard = new Wizard("Kenzie", 4.0,7.0);
+		wizard.displayInfo();
+		System.out.println("Kenzie's race is a: " + wizard.getRace());
+		System.out.println("Gabi's race is a: " + elf.getRace());
+		System.out.println("Jessica's race is a: " + human.getRace());
 
 	}
 
