@@ -1,3 +1,4 @@
+
 package middleearth.app.characters;
 
 public class Elf extends MiddleEarthCharacter {

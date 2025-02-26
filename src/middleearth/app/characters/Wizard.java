@@ -5,8 +5,6 @@ public class Wizard extends MiddleEarthCharacter {
 	public Wizard(String name, Double health, Double power) {
 		super(name, health, power);
 	}
-
-	// GABI YOU DIDN'T FINISH THIS FUNCTION
 	
 	/**
 	 * Performs an attack on a target based on the rules of a wizard
@@ -17,24 +15,24 @@ public class Wizard extends MiddleEarthCharacter {
 	@Override
 	public boolean attack(MiddleEarthCharacter target) {
 		
-		// Orcs attack Humans w/ x1.5 power
-		if(target.getClass().getSimpleName().equals("Human"))
+		// Wizards attack Dwarfs w/ x1.5 power
+		if(target.getClass().getSimpleName().equals("Dwarf"))
 		{
 			target.health -= 1.5 * power;
 			return true;
 		}
 		
-		// Orcs attack Elves and fellow Orcs w/ no power
-		if(target.getClass().getSimpleName().equals("Orc") ||
-				target.getClass().getSimpleName().equals("Elf"))
+		// Wizards attack Humans and fellow Wizards w/ no power
+		if(target.getClass().getSimpleName().equals("Human") ||
+				target.getClass().getSimpleName().equals("Wizard"))
 		{
 			target.health -= 0;
 			return true;
 		}
 		
-		// Orcs attack Wizards and Dwarfs w/ normal power
-		if(target.getClass().getSimpleName().equals("Wizard") ||
-				target.getClass().getSimpleName().equals("Dwarf"))
+		// Wizards attack Elfs and Orcs w/ normal power
+		if(target.getClass().getSimpleName().equals("Elf") ||
+				target.getClass().getSimpleName().equals("Orc"))
 		{
 			target.health -= power;
 			return true;
