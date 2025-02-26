@@ -41,10 +41,13 @@ public class Orc extends MiddleEarthCharacter{
 		return false;
 	}
 
+	/**
+	 * Returns the race of the MiddleEarthCharacter, which is the simple name of
+	 * the MiddleEarthCharacter. This is for the Orc.
+	 */
 	@Override
-	String getRace() {
-		// TODO Auto-generated method stub
-		return null;
+	public String getRace() {
+		return this.getClass().getSimpleName();
 	}
 
 }

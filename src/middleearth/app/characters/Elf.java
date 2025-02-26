@@ -42,10 +42,13 @@ public class Elf extends MiddleEarthCharacter {
 		return false;
 	}
 
+	/**
+	 * Returns the race of the MiddleEarthCharacter, which is the simple name of
+	 * the MiddleEarthCharacter. This is for the Elf.
+	 */
 	@Override
-	String getRace() {
-		// TODO Auto-generated method stub
-		return null;
+	public String getRace() {
+		return this.getClass().getSimpleName();
 	}
 
 }
