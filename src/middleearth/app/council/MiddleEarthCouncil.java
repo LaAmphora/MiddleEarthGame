@@ -13,6 +13,10 @@ public class MiddleEarthCouncil {
 		
 	}
 	
+	/**
+	 * Creates the only instance of MiddleEarthCharacter
+	 * according to the Singleton Design pattern.
+	 * */
 	public static MiddleEarthCouncil getInstance() {
 		if(instance == null) {
 			instance = new MiddleEarthCouncil ();
@@ -20,6 +24,10 @@ public class MiddleEarthCouncil {
 		return instance;
 	}
 	
+	/**
+	 * Retrieves the manager so that the user can apply
+	 * different operations to the characters array.
+	 * */
 	public CharacterManager getCharacterManager() {
 		return manager;
 	}
