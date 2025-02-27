@@ -24,32 +24,44 @@ public abstract class MiddleEarthCharacter {
 	}
 	
 	
-	
+	/** Gets the name of a Middle Earth Character object*/
 	public String getName() {
 		return name;
 	}
 	
-
+	/** Sets the name of a Middle Earth Character object
+	 * @param name (String)
+	 * 		This argument is the name of the character.
+	 * */
 	public void setName(String name) {
 		this.name = name;
 	}
 
 
+	/** Gets the health of a Middle Earth Character object*/
 	public Double getHealth() {
 		return health;
 	}
 
-
+	
+	/** Sets the health of a Middle Earth Character object
+	 * @param health (Double)
+	 * 		This argument is the health of the character.
+	 * */
 	public void setHealth(Double health) {
 		this.health = health;
 	}
 
 
+	/** Gets the power of a Middle Earth Character object*/
 	public Double getPower() {
 		return power;
 	}
 
-
+	/** Sets the power of a Middle Earth Character object
+	 * @param power (Double)
+	 * 		This argument is the power of the character.
+	 * */
 	public void setPower(Double power) {
 		this.power = power;
 	}
