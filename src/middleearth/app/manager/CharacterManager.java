@@ -62,9 +62,52 @@ public class CharacterManager {
 		return null;
 	}
 	
+	/**
+	 * Updates the fields of a selected character currently in the characters array.
+	 * @param character (MiddleEarthCharacter)
+	 * 		The argument is the character to be updated.
+	 * @param name (String)
+	 * 		The argument is the new name of the updated character.
+	 * @param health (integer)
+	 * @param power (integer
+	 * */
 	public boolean updateCharacter(MiddleEarthCharacter character, String name, int health, int power)
 	{
-		return false;
+		// tracks the index to find the character selected
+		// in the characters array
+		int index = -1;
+		
+		for(int i = 0; i < size; i++)
+		{
+			// finds matching character based on name
+			if(characters[i].getName().equals(character.getName())) 
+			{
+				index = i;
+			}
+		}
+		
+		// if character not found
+		if(index == -1)
+		{
+			System.out.println(character.getName() + " does not exist.");
+			return false;
+		}
+		
+		// if character not updated
+		if((name == null || characters[index].getName().equals(name)) 
+				&& characters[index].getHealth() == (double)health
+				&& characters[index].getPower() == (double)power)
+		{
+			System.out.println(character.getName() + " not changed.");
+			return false;
+		}
+		
+		// update the character
+		characters[index].setName(name);
+		characters[index].setHealth((double)health);
+		characters[index].setPower((double)power);
+		
+		return true;
 	}
 	
 }

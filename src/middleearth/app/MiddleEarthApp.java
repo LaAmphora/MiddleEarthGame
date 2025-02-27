@@ -16,15 +16,20 @@ public class MiddleEarthApp {
 		Human human = new Human("Jessica", 9.0, 1.0);
 		human.displayInfo();
 		
-		human.attack(elf);
+		MiddleEarthCouncil.getInstance().getCharacterManager().addCharacter(human);
+		MiddleEarthCouncil.getInstance().getCharacterManager().updateCharacter(human, null, 9, 1);
 		
-		elf.displayInfo();
+		human.displayInfo();
 		
-		Wizard wizard = new Wizard("Kenzie", 4.0,7.0);
-		wizard.displayInfo();
-		System.out.println("Kenzie's race is a: " + wizard.getRace());
-		System.out.println("Gabi's race is a: " + elf.getRace());
-		System.out.println("Jessica's race is a: " + human.getRace());
+//		human.attack(elf);
+//		
+//		elf.displayInfo();
+//		
+//		Wizard wizard = new Wizard("Kenzie", 4.0,7.0);
+//		wizard.displayInfo();
+//		System.out.println("Kenzie's race is a: " + wizard.getRace());
+//		System.out.println("Gabi's race is a: " + elf.getRace());
+//		System.out.println("Jessica's race is a: " + human.getRace());
 
 
 	}
