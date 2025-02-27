@@ -2,7 +2,9 @@ package middleearth.app;
 
 import middleearth.app.characters.Elf;
 import middleearth.app.characters.Wizard;
+import middleearth.app.council.MiddleEarthCouncil;
 import middleearth.app.characters.Human;
+import middleearth.app.characters.Orc;
 
 public class MiddleEarthApp {
 
@@ -23,6 +25,7 @@ public class MiddleEarthApp {
 		System.out.println("Kenzie's race is a: " + wizard.getRace());
 		System.out.println("Gabi's race is a: " + elf.getRace());
 		System.out.println("Jessica's race is a: " + human.getRace());
+
 
 	}
 

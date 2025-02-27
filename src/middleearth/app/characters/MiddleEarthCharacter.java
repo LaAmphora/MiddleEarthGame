@@ -2,9 +2,9 @@ package middleearth.app.characters;
 
 public abstract class MiddleEarthCharacter {
 	
-	String name;
-	Double health;
-	Double power;
+	private String name;
+	private Double health;
+	private Double power;
 
 	
 	/**
@@ -24,9 +24,42 @@ public abstract class MiddleEarthCharacter {
 	}
 	
 	
+	
+	public String getName() {
+		return name;
+	}
+	
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+	public Double getHealth() {
+		return health;
+	}
+
+
+	public void setHealth(Double health) {
+		this.health = health;
+	}
+
+
+	public Double getPower() {
+		return power;
+	}
+
+
+	public void setPower(Double power) {
+		this.power = power;
+	}
+
+
+
 	public abstract boolean attack(MiddleEarthCharacter target);
 	
 	public abstract String getRace();
+	
 	
 	/**
 	 * Displays information about a Middle Earth Character.

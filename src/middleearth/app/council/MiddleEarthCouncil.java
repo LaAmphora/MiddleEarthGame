@@ -5,6 +5,7 @@ import middleearth.app.manager.CharacterManager;
 public class MiddleEarthCouncil {
 
 	private static MiddleEarthCouncil instance;
+	private CharacterManager manager = new CharacterManager();
 	
 	// constructor that prevents the class
 	// from being invoked outside
@@ -20,7 +21,7 @@ public class MiddleEarthCouncil {
 	}
 	
 	public CharacterManager getCharacterManager() {
-		return new CharacterManager();
+		return manager;
 	}
 	
 }
