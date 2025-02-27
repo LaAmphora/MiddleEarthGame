@@ -133,12 +133,12 @@ public class CharacterManager {
 				}
 				characters[size-1] = null; //null the last spot because everything was moved forward
 				size--; //decrease size / number of characters
-				System.out.println(character.getName() + " was deleted successfully!");
+				System.out.println("\n" + character.getName() + " was deleted successfully!");
 				return true;
 			}
 			
 		}
-		System.out.println(character.getName() + " could not be deleted.");
+		System.out.println("\n" + character.getName() + " could not be deleted.");
 		return false;
 		
 	}
@@ -150,7 +150,7 @@ public class CharacterManager {
 	public void displayAllCharacters() 
 	{
 		//for each character in array, display their information using the previously made method
-		System.out.println("All characters:");
+		System.out.println("\nAll characters: \n***************");
 		for (int i = 0; i < size; i++) {
 			characters[i].displayInfo();
 		}

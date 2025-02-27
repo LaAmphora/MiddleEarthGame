@@ -21,9 +21,12 @@ public class MiddleEarthApp {
 		
 		human.displayInfo();
 		
-		//tests for delete character in middleEarthCouncil
+		//tests for delete character and displayAllCharacters in middleEarthCouncil
 		MiddleEarthCouncil.getInstance().getCharacterManager().addCharacter(elf);
+		MiddleEarthCouncil.getInstance().getCharacterManager().displayAllCharacters();
 		MiddleEarthCouncil.getInstance().getCharacterManager().deleteCharacter(elf);
+		MiddleEarthCouncil.getInstance().getCharacterManager().displayAllCharacters();
+
 		
 //		human.attack(elf);
 //		
