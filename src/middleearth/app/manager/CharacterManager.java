@@ -7,7 +7,10 @@ public class CharacterManager {
 	private MiddleEarthCharacter[] characters;
 	private int size;
 	
-	
+	/**
+	 * Default constructor for CharacteraManager, that
+	 * allows you to create a generic manager of Middle Earth characters
+	 * */
 	public CharacterManager() {
 		super();
 		this.characters = new MiddleEarthCharacter[3];
