@@ -41,4 +41,25 @@ public class CharacterManager {
 		}
 	}
 	
+	/**
+	 * Retrieves a character based on the character's name.
+	 * @param name (String)
+	 * 		The argument is the name of the character to be retrieved.
+	 * */
+	public MiddleEarthCharacter getCharacter(String name) {
+		
+		// search for character name among the characters array
+		for(int i = 0; i < size; i++)
+		{
+			if(characters[i].getName() == name)
+			{
+				return characters[i];
+			}
+		}
+		
+		// if the character not found
+		System.out.println(name + " not found.");
+		return null;
+	}
+	
 }
