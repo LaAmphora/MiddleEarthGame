@@ -106,7 +106,20 @@ public class Menu {
 					
 				//execute all characters attacks
 				case 5:
+					System.out.println("Enter the name of the character that is attacking: ");
+					String attackingName = scanner.nextLine().trim();
+					MiddleEarthCharacter attackingChar = MiddleEarthCouncil.getInstance().getCharacterManager().getCharacter(attackingName);
 					
+					System.out.println("Enter the name of the target character: ");
+					String attackedName = scanner.nextLine().trim();
+					MiddleEarthCharacter targetChar = MiddleEarthCouncil.getInstance().getCharacterManager().getCharacter(attackedName);
+					
+					boolean attackStatus = attackingChar.attack(targetChar);
+					if (attackStatus) {
+						System.out.println(attackingName + " attacked " + attackedName + "successfully!");
+					} else {
+						System.out.println("Attack failed.");
+					}
 					
 				//exit program
 				case 6:
