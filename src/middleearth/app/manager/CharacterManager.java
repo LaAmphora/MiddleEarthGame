@@ -114,7 +114,7 @@ public class CharacterManager {
 	}
 	
 	/**
-	 * This function deletes a character from the characters array.
+	 * This method deletes a character from the characters array.
 	 * It updates the character array accordingly by shifting the elements.
 	 * @param character (MiddleEarthCharacter)
 	 * 		This is the character to be deleted from the array.
@@ -140,6 +140,20 @@ public class CharacterManager {
 		}
 		System.out.println(character.getName() + " could not be deleted.");
 		return false;
+		
+	}
+	
+	/**
+	 * Displays all MiddleEarthCharacters within the character array.
+	 * Uses the displayInfor() method in MiddleEarthCharacter class.
+	 */
+	public void displayAllCharacters() 
+	{
+		//for each character in array, display their information using the previously made method
+		System.out.println("All characters:");
+		for (int i = 0; i < size; i++) {
+			characters[i].displayInfo();
+		}
 		
 	}
 	
