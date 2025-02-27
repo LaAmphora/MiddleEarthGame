@@ -30,7 +30,7 @@ public class Wizard extends MiddleEarthCharacter {
 			return true;
 		}
 		
-		// Wizards attack Elfs and Orcs w/ normal power
+		// Wizards attack Elves and Orcs w/ normal power
 		if(target.getClass().getSimpleName().equals("Elf") ||
 				target.getClass().getSimpleName().equals("Orc"))
 		{
