@@ -62,4 +62,9 @@ public class CharacterManager {
 		return null;
 	}
 	
+	public boolean updateCharacter(MiddleEarthCharacter character, String name, int health, int power)
+	{
+		return false;
+	}
+	
 }

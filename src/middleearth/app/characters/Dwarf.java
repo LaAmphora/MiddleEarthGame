@@ -15,10 +15,13 @@ public class Dwarf extends MiddleEarthCharacter{
 	@Override
 	public boolean attack(MiddleEarthCharacter target) {
 		
+		double health = target.getHealth();
+		
 		// Dwarfs attack Elf w/ x1.5 power
 		if(target.getClass().getSimpleName().equals("Elf"))
 		{
-			target.health -= 1.5 * power;
+			health -= 1.5 * getPower();
+			target.setHealth(health);
 			return true;
 		}
 		
@@ -26,7 +29,7 @@ public class Dwarf extends MiddleEarthCharacter{
 		if(target.getClass().getSimpleName().equals("Dwarf") ||
 				target.getClass().getSimpleName().equals("Wizard"))
 		{
-			target.health -= 0;
+			health -= 0;
 			return true;
 		}
 		
@@ -34,7 +37,8 @@ public class Dwarf extends MiddleEarthCharacter{
 		if(target.getClass().getSimpleName().equals("Human") ||
 				target.getClass().getSimpleName().equals("Orc"))
 		{
-			target.health -= power;
+			health -= getPower();
+			target.setHealth(health);
 			return true;
 		}
 			
