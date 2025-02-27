@@ -113,4 +113,40 @@ public class CharacterManager {
 		return true;
 	}
 	
+	/**
+	 * This function deletes a character from the characters array.
+	 * It updates the character array accordingly by shifting the elements.
+	 * @param character (MiddleEarthCharacter)
+	 * 		This is the character to be deleted from the array.
+	 * @param name (String)
+	 * 		This is the name of the character to be deleted.
+	 * @param health (int)
+	 * 		This is the health of the character to be deleted.
+	 * @param power (int)
+	 * 		This is the power of the character to be deleted.
+	 * @return
+	 * 		Returns true if deletion was successful, false if not.
+	 */
+	public boolean deleteCharacter(MiddleEarthCharacter character, String name, int health, int power) 
+	{
+		
+		//need to traverse through the character array to find the one to be deleted
+		for (int i = 0; i < size; i++) {
+			
+			if (characters[i].getName().equals(name)) { //if we find the character
+				for (int j = i; j < size - 1; j++) {
+					characters[j] = characters[j+1]; //shift all characters up one spot
+				}
+				characters[size-1] = null; //null the last spot because everything was moved forward
+				size--; //decrease size / number of characters
+				System.out.println("Character was deleted successfully");
+				return true;
+			}
+			
+		}
+		System.out.println("Character " + name + " could not be deleted.");
+		return false;
+		
+	}
+	
 }
