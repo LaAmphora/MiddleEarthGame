@@ -27,9 +27,21 @@ public class Menu {
 			System.out.println("1. Add a new character\n2. View all characters\n"
 					+ "3. Update a character\n4. Delete a character\n5. Execute all characters' attack actions"
 					+ "\n6. Exit");
-			System.out.print("Enter your choice (1-6): ");
 			
-			int choice = scanner.nextInt();
+			int choice = 0;
+			
+			while(true)
+			{
+				try {
+					System.out.print("Enter your choice (1-6): ");
+					choice = scanner.nextInt();
+					break;
+				} catch (Exception e) {
+					System.out.println("Please enter an integer.");
+					scanner.next();
+				}
+			}
+			
 			scanner.nextLine();
 			
 			switch(choice) {
@@ -175,6 +187,7 @@ public class Menu {
 				//default case for error checking
 				default:
 					System.out.println("Invalid input. Please try again."); //for invalid inputs, (inputs that are not 1-6)
+					break;
 
 			}
 			
