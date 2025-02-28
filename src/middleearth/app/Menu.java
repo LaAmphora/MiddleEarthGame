@@ -14,6 +14,11 @@ public class Menu {
 	
 	private Scanner scanner = new Scanner(System.in);
 	
+	/**
+	 * This is a method used to display the Main Menu 
+	 * of the Middle Earth Game. All choices are displayed in
+	 * the console, obtaining user input.
+	 */
 	public void displayMenu() {
 		while (true) {
 			
@@ -127,6 +132,10 @@ public class Menu {
 					System.out.println("Exiting... Goodbye!");
 					scanner.close();
 					return;
+					
+				//default case for error checking
+				default:
+					System.out.println("Invalid input. Please try again.");
 
 			}
 			
