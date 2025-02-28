@@ -67,9 +67,18 @@ public abstract class MiddleEarthCharacter {
 	}
 
 
-
+	/**
+	 * Abstract method used to attack for the subclasses.
+	 * @param target
+	 * 		The character that is being attacked.
+	 * @return
+	 */
 	public abstract boolean attack(MiddleEarthCharacter target);
 	
+	/**
+	 * Abstract method used to get the race of the subclasses.
+	 * @return
+	 */
 	public abstract String getRace();
 	
 	
