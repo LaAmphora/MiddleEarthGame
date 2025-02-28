@@ -81,6 +81,7 @@ public class Menu {
 					MiddleEarthCharacter character = MiddleEarthCouncil.getInstance().getCharacterManager().getCharacter(oldName);
 					if (character == null) {
 						System.out.println("Character was not found.");
+						break;
 					}
 					
 					System.out.println("Updating " + character.getName() + "...");
@@ -88,11 +89,32 @@ public class Menu {
 					System.out.println("Enter new name: ");
 					String newName = scanner.nextLine().trim();
 					
-					System.out.println("Enter new health: ");
-					int newHealth = scanner.nextInt();
+					int newHealth = (int)(double)(character.getHealth());
+					while(true)
+					{
+						System.out.println("Enter new health: ");
+						try {
+							newHealth = scanner.nextInt();
+							break;
+						} catch (Exception e) {
+							System.out.println("Health value must be integer. Try again. ");
+							scanner.next();
+						}
+					}
 					
-					System.out.println("Enter new power: ");
-					int newPower = scanner.nextInt();
+					
+					int newPower = (int)(double)(character.getPower());
+					while(true)
+					{
+						System.out.println("Enter new power: ");
+						try {
+							newPower = scanner.nextInt();
+							break;
+						} catch (Exception e) {
+							System.out.println("Power value must be integer. Try again.");
+							scanner.next();
+						}
+					}
 					
 					boolean isUpdated = MiddleEarthCouncil.getInstance().getCharacterManager().updateCharacter(character, newName, newHealth, newPower);
 					
@@ -107,6 +129,12 @@ public class Menu {
 					String delName = scanner.nextLine().trim();
 					
 					MiddleEarthCharacter delCharacter = MiddleEarthCouncil.getInstance().getCharacterManager().getCharacter(delName);
+					
+					if(delCharacter == null)
+					{
+						break;
+					}
+					
 					boolean wasDeleted = MiddleEarthCouncil.getInstance().getCharacterManager().deleteCharacter(delCharacter);
 					break;
 					
@@ -116,9 +144,19 @@ public class Menu {
 					String attackingName = scanner.nextLine().trim();
 					MiddleEarthCharacter attackingChar = MiddleEarthCouncil.getInstance().getCharacterManager().getCharacter(attackingName);
 					
+					if(attackingChar == null)
+					{
+						break;
+					}
+					
 					System.out.println("Enter the name of the target character: ");
 					String attackedName = scanner.nextLine().trim();
 					MiddleEarthCharacter targetChar = MiddleEarthCouncil.getInstance().getCharacterManager().getCharacter(attackedName);
+					
+					if(targetChar == null)
+					{
+						break;
+					}
 					
 					boolean attackStatus = attackingChar.attack(targetChar);
 					if (attackStatus) {
