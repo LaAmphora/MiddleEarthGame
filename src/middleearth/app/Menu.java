@@ -72,7 +72,7 @@ public class Menu {
 					System.out.print("Enter the character's name you want to update: ");
 					String oldName = scanner.nextLine().trim();
 					
-					MiddleEarthCharacter character = MiddleEarthCouncil.getInstance().getCharacterManager().getCharacter(uName);
+					MiddleEarthCharacter character = MiddleEarthCouncil.getInstance().getCharacterManager().getCharacter(oldName);
 					if (character == null) {
 						System.out.println("Character was not found.");
 					}
@@ -101,7 +101,7 @@ public class Menu {
 					String delName = scanner.nextLine().trim();
 					
 					MiddleEarthCharacter delCharacter = MiddleEarthCouncil.getInstance().getCharacterManager().getCharacter(delName);
-					boolean wasDeleted = MiddleEarthCouncil.getInstance().getCharacterManager().deleteCharacter(character);
+					boolean wasDeleted = MiddleEarthCouncil.getInstance().getCharacterManager().deleteCharacter(delCharacter);
 					break;
 					
 				//execute all characters attacks
@@ -120,6 +120,7 @@ public class Menu {
 					} else {
 						System.out.println("Attack failed.");
 					}
+					break;
 					
 				//exit program
 				case 6:

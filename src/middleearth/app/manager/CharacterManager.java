@@ -54,7 +54,7 @@ public class CharacterManager {
 		// search for character name among the characters array
 		for(int i = 0; i < size; i++)
 		{
-			if(characters[i].getName() == name)
+			if(characters[i].getName().equalsIgnoreCase(name.trim()))
 			{
 				return characters[i];
 			}
