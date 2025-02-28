@@ -22,6 +22,7 @@ public class Menu {
 	public void displayMenu() {
 		while (true) {
 			
+			//menu options displayed in console
 			System.out.println("\n*************************\nThe Middle Earth Madness\n*************************");
 			System.out.println("1. Add a new character\n2. View all characters\n"
 					+ "3. Update a character\n4. Delete a character\n5. Execute all characters' attack actions"
@@ -121,7 +122,7 @@ public class Menu {
 					
 					boolean attackStatus = attackingChar.attack(targetChar);
 					if (attackStatus) {
-						System.out.println(attackingName + " attacked " + attackedName + "successfully!");
+						System.out.println(attackingName + " attacked " + attackedName + " successfully!");
 					} else {
 						System.out.println("Attack failed.");
 					}
